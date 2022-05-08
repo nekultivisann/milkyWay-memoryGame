@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600;800&display=swap" rel="stylesheet">  
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <title>Mind games</title>
+  </head>
+  <body>
+    <div class="log--board">
+      <div class="title">
+      <h1 class="h1">MILKY WAY</h1>
+        <h1 class="h1__span">the memory game</h1>
+      </div> 
+      <form>       
+        <input class="nickname__input" placeholder="nickname" type="text">
+        <p class="formP">Press ENTER to start...</p>
+        <button class="hidden--button" type="submit">Submit form</button>
+        <p></p>
+      </form>
+      <div class="highscore">
+        <h2>HIGHSCORE</h2>
+        <ol class="highscore__list">
+        </ol>
+        <button class="btn--clear">CLEAR HIGHSCORES</button>
+      </div>
+    </div>
+    <div class="container hidden">
+      <div class="scoreBoard ">
+        <h3 class="scoreH2">Welcome, <span class="nickname">nickname</span></h3>
+        <div class="moves">MOVES: <span class="moves moves--num">12</span></div>
+        <div class="score">SCORE: <span class="score score--num">0</span></div>
+        <form class="restart hidden">         
+         <button class="restart--play">PRESS TO PLAY AGAIN!</button>
+        </form>
+      </div class="scoreBoard">
+      <div class="box-container">
+      <div class="box"></div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
