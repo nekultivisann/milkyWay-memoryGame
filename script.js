@@ -54,11 +54,8 @@ function insertHtml() {
 
 function blinkingHint() {
   setInterval(() => {
-    formP.style.opacity = 1;
-  }, 1000);
-  setInterval(() => {
-    formP.style.opacity = 0;
-  }, 2000);
+    formP.classList.toggle('hide');
+  }, 1100);
 }
 //FUNCTION CALLS
 // function for login ENTER blink
@@ -163,6 +160,7 @@ function reset() {
   resetField.classList.add('hidden');
   homeScreen.classList.remove('hidden');
   mainContainer.classList.add('hidden');
+  mainContainer.classList.add('none');
   score = 0;
   moves = 12;
   resetBoard();
@@ -214,7 +212,12 @@ form.addEventListener('submit', function (e) {
   homeScreen.classList.add('hidden');
   usernameLabel.textContent = nickname;
   setTimeout(() => homeScreen.classList.add('none'), 400);
-  setTimeout(() => mainContainer.classList.remove('hidden'), 420);
+  setTimeout(() => {
+    mainContainer.classList.remove('none');
+  }, 420);
+  setTimeout(() => {
+    mainContainer.classList.remove('hidden');
+  }, 440);
   inputNickname.blur();
   inputNickname.value = '';
   moves = 12;
